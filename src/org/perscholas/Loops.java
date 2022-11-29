@@ -7,8 +7,11 @@ public class Loops {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		//multiplicationTable();
+		
+		multiplicationTable();
 		greatestCommonDivisor(sc);
+		futureTuition();
+		sc.close();
 	}
 	
 	// Question 1 Write a program that uses nested for loops to print a multiplication table.
@@ -21,7 +24,7 @@ public class Loops {
 		}
 	}
 	
-	// Write a program that prompts the user to enter two positive integers, and find their greatest common divisor (GCD).
+	// Question 2 Write a program that prompts the user to enter two positive integers, and find their greatest common divisor (GCD).
 	public static void greatestCommonDivisor(Scanner sc) {
 		int x = sc.nextInt();
 		int y = sc.nextInt();
@@ -33,6 +36,21 @@ public class Loops {
 				break;
 			}
 		}
+	}
+	
+	/* Question 3
+	 Suppose the tuition for a university is $10,000 for the current year and increases by 7 percent every year. 
+	 In how many years will the tuition be doubled?
+	*/
+	public static void futureTuition() {
+		double tuition = 10000;
+		int years = 0;
+		while (true) {
+			if (tuition >= 20000) break;
+			tuition = tuition * 1.07D;
+			years++;
+		}
+		System.out.println(years);
 	}
 	
 }
