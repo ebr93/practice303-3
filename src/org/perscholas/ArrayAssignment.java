@@ -126,7 +126,7 @@ public class ArrayAssignment {
 	 */
 	
 	public static void question9() {
-		int[] arr = {4, 2, 9, 13, 1, 0};
+		int[] arr = {4, 2, 9, 13, 1, 0, 99};
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i +1; j < arr.length; j++) {
 				int temp = 0;
@@ -142,7 +142,7 @@ public class ArrayAssignment {
 			System.out.print(num + ", ");
 		}
 		System.out.println("\nThe smallest number is " + arr[0]);
-		System.out.println("The smallest number is " + arr[5]);
+		System.out.println("The biggest number is " + arr[arr.length - 1]);
 
 	}
 	
@@ -151,19 +151,9 @@ public class ArrayAssignment {
 	 */
 	
 	public static void question10() {
-		String[] strings = {"1", "hello", "world", "string", "1.007"};
-		for(int i = 0; i < strings.length; i++) {
-			if (i == 0) {
-				// turns it in an Integer instance
-				System.out.println(Integer.valueOf(strings[i])); 
-				continue;
-			} else if (i == 4) {
-				// turns it into a Double instance
-				System.out.println(Double.valueOf(strings[i])); 
-				continue;
-			}
-			System.out.println(strings[i]);
-		}
+		Object[] list = {11, "hello", "world", "programming", 3.14D}; 
+		System.out.println(Arrays.toString(list));
+		
 	}
 	
 	/*
